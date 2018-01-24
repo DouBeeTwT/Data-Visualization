@@ -47,9 +47,4 @@ RMSD <- function(n=25000,t=0.002,text_size=15,title_size=25,f=c(...)){
   
 }
 
-RMSD(f=c("G:/PIMA/DATA/C3-OH_CH3/rmsd_md1.out",
-         "G:/PIMA/DATA/C3-OH_CH3/rmsd_md2.out",
-         "G:/PIMA/DATA/C3-OH_CH3/rmsd_md3.out",
-         "G:/PIMA/DATA/C3-OH_CH3/rmsd_md4.out",
-         "G:/PIMA/DATA/C3-OH_CH3/rmsd_md5.out",
-         "G:/PIMA/DATA/C3-OH_CH3/rmsd_md6.out"))
+#RMSD(f=c("File name1","File name2",...))
