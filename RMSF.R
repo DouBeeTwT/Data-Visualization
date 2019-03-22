@@ -18,7 +18,7 @@ RMSF <- function(text_size=15,title_size=25,f=c(...)){
               "rmsf7","rmsf8","rmsf9","rmsf10","rmsf11","rmsf12")
   len=length(f)
   rmsf=read.table(f[1])
-  n=length(rmsf)
+  n=length(rmsf$V1)
   for (i in 2:len) {
     rmsf=rbind(rmsf,read.table(f[i]))
   }
