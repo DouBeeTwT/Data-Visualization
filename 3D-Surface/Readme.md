@@ -21,14 +21,15 @@ NumPy 是一个运行速度非常快的数学库，主要用于数组计算，�
 + 整合 C/C++/Fortran 代码的工具
 + 线性代数、傅里叶变换、随机数生成等功能
 
-<div align=center><img src="https://www.numpy.org/_static/numpy_logo.png" width = 100% height = 100% />
+<div align=center><img src="https://www.numpy.org/_static/numpy_logo.png" width = 50% height = 50% /><div align=left>
 
 #### 1.1.2 `Matplotlib`简介
 Matplotlib是一个Python 2D绘图库，它可以在各种平台上以各种硬拷贝格式和交互式环境生成出具有出版品质的图形。只需几行代码即可生成绘图，直方图，功率谱，条形图，错误图，散点图等。
 
 为了简单绘图，pyplot模块提供了类似于MATLAB的界面，特别是与IPython结合使用时。 对于高级用户，您可以通过面向对象的界面或MATLAB用户熟悉的一组函数完全控制线条样式，字体属性，轴属性等
 
-<div align=center>![](https://matplotlib.org/_static/logo2.png)
+<div align=center><img src="https://matplotlib.org/_static/logo2.png" width = 50% height = 50% /><div align=left>
+
 
 #### 1.1.3 加载程序包
 
