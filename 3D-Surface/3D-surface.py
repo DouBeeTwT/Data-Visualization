@@ -6,11 +6,11 @@ import numpy as np
 
 ######
 
-data = np.loadtxt("G:/PIMA/US/result.dat")
-X = np.array(data[0:20,1])
-Y = np.array(data[0:20,1])
+data = np.loadtxt("D:/Github/Data-Visualization/3D-Surface/MLS-result.dat")
+X = np.array(data[0:40,1])
+Y = np.array(data[0:40,1])
 X, Y = np.meshgrid(X, Y)
-Z = np.array(data[:,2]).reshape(20,20,order='F')
+Z = np.array(data[:,2]).reshape(40,40,order='F')
 ###
 #Created by matplotlib
 ###
