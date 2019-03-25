@@ -42,8 +42,32 @@ from mpl_toolkits.mplot3d import Axes3D
 ```
 
 ### 1.2 数据写入与数据结构修改
+```Python
+data = np.loadtxt("Data_PATH")
+```
+通过`Numpy`中的`loadtxt()`函数我们可以从本地读入一个文本文档并被保存为ndarray数据结构。其中Data_PATH是我们文件所在的本地路径，需要特异性替换。
+```Python
+X=list({}.fromkeys(data[:,0]).keys())
+X_num = len(X)
+Y=list({}.fromkeys(data[:,1]).keys())
+Y_num = len(Y)
+X, Y = np.meshgrid(X, Y)
+Z = np.array(data[:,2]).reshape(X_num,Y_num,order='F')
+```
+读取数据文件后我们就能实现可视化了吗？显然不能(T.T)~我们的Axes3D需要X,Y,Z都是二维数组才能完成曲面的绘制。举一个简单的例子，我们的实验结果只有四个点(X1,Y1,Z1),(X2,Y1,Z2),(X1,Y2,Z3),(X2,Y2,Z4)，在我们的读入文件中这四个点的被顺序排列成四行三列：
+
+| X | Y | Z || X | X || Y | Y || Z | Z |
+|:-:|:-:|:-:||:-:|:-:||:-:|:-:||:-:|:-:|
+|X1 |Y1 |Z1 ||X1 |X2 ||Y1 |Y1 ||Z1 |Z3 |
+|X1 |Y2 |Z2 ||X1 |X2 ||Y2 |Y2 ||Z2 |Z4 |
+|X2 |Y1 |Z3 ||   |   ||   |   ||   |   |
+|X2 |Y2 |Z4 ||   |   ||   |   ||   |   ||
+
+于是我们需要单独取出X值，Y值，Z值，重构成右边的三个二维数组。代码上我们首先用字典格式去重复读取了第一列并重新定义为列表结构保存于`X`中。保存下X值一共有多少种在`X_num`中。同理我们得到`Y`和`Y_num`。在上例中X=(X1,X2),Y=(Y1,Y2),X_num=2,Y_num=2。以这些信息为输入重构数据为三个可用的二维数组。
 
 ### 1.3 数据可视化与参数调整
+
+
 
 ### 1.4 后修饰
 

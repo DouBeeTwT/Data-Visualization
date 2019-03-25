@@ -7,10 +7,12 @@ import numpy as np
 ######
 
 data = np.loadtxt("D:/Github/Data-Visualization/3D-Surface/MLS-result.dat")
-X = np.array(data[0:40,1])
-Y = np.array(data[0:40,1])
+X=list({}.fromkeys(data[:,0]).keys())
+X_num = len(X)
+Y=list({}.fromkeys(data[:,1]).keys())
+Y_num = len(Y)
 X, Y = np.meshgrid(X, Y)
-Z = np.array(data[:,2]).reshape(40,40,order='F')
+Z = np.array(data[:,2]).reshape(X_num,Y_num,order='F')
 ###
 #Created by matplotlib
 ###
