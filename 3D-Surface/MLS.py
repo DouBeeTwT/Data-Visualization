@@ -45,6 +45,6 @@ def MLS(data,Smax):
         #print(i)
     return R
 
-input = np.loadtxt("D:/Github/Data-Visualization/3D-Surface/result.dat")
+input = np.loadtxt("D:/Github/Data-Visualization/3D-Surface/result_43x43.dat")
 data = MLS(input[:,[0,1,2]],1.3)
-np.savetxt("D:/Github/Data-Visualization/3D-Surface/MLS-result.dat",data)
+np.savetxt("D:/Github/Data-Visualization/3D-Surface/MLS-result_43x43.dat",data)

@@ -67,6 +67,19 @@ Z = np.array(data[:,2]).reshape(X_num,Y_num,order='F')
 
 ### 1.3 数据可视化与参数调整
 
+```Python
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+surface = ax.plot_surface(X, Y, Z)
+plt.show()
+```
+
+现在，通过几行简单的代码我们就能实现数据的可是化：
+
+![]
+
+
+
 
 
 ### 1.4 后修饰
